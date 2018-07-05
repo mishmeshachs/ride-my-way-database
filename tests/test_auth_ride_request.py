@@ -18,20 +18,20 @@ class TestRequests(unittest.TestCase):
                       "password": "1234"}
         self.user4 = {"username": "test3", "email": "test23@gmail.com",
                       "password": "test123456"}
-        self.user5 = {"username": "daniel", "email": "danielmutuba@gmail.com",
-                      "password": "baraka11"}
+        self.user5 = {"username": "meshach", "email": "mishmeshachs@gmail.com",
+                      "password": "meshach"}
 
-        self.user6 = {"username": "daniel", "email": "danielmu.com",
-                      "password": "baraka11"}
+        self.user6 = {"username": "meshach", "email": "meshachmi.com",
+                      "password": "meshach13"}
 
         self.user7 = {
-            "username": "mis  shach",
+            "username": "mesh ach",
             "email": "mishmeshachs@gmail.com",
-            "password": "reckt233"}
+            "password": "meshach123"}
 
         self.user8 = {
             "username": "meshach", "email": "mishmeshachs@gmail.com",
-            "password": "baraka11"}
+            "password": "meshachs"}
 
         self.request = {
             "request_description": "Testing_update_3 request",
@@ -62,7 +62,7 @@ class TestRequests(unittest.TestCase):
                                       data=json.dumps(self.user5),
                                       content_type='application/json')
         data = json.loads(response.data.decode('UTF-8'))
-        self.assertTrue(data[0]["token"])
+        self.assertTrue(data[0]['token')
         self.assertEquals(response.status_code, 201)
         self.headers = {'token': data[0]['token']}
 

@@ -3,10 +3,11 @@ import psycopg2
 import datetime
 
 
-conn = psycopg2.connect(
-    host=os.getenv("postgres"), database=os.getenv("postgres"),
-    user=os.getenv("postgres"), password=os.getenv("postgres"))
-
+# conn = psycopg2.connect(
+#     host=os.getenv("postgres"), database=os.getenv("postgres"),
+#     user=os.getenv("postgres"), password=os.getenv("postgres"))
+conn = psycopg2.connect(dbname='postgres', host='localhost', user='postgres', password='postgres')
+   
 
 class User(object):
     def __init__(self, username, email, password, role):

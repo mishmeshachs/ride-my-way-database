@@ -69,7 +69,7 @@ def create_app(config_name):
             token = None
 
             if 'access-token' in request.headers:
-                token = request.headers['access_token']
+                token = request.headers['access-token']
 
             else:
                 token = request.headers.get('token')
