@@ -1,7 +1,7 @@
 import os
 import unittest
 import json
-from V2 import create_app
+from V2.views import create_app
 import psycopg2
 
 
@@ -62,7 +62,7 @@ class TestRequests(unittest.TestCase):
                                       data=json.dumps(self.user5),
                                       content_type='application/json')
         data = json.loads(response.data.decode('UTF-8'))
-        self.assertTrue(data[0]['token')
+        self.assertTrue(data[0]['token'])
         self.assertEquals(response.status_code, 201)
         self.headers = {'token': data[0]['token']}
 
