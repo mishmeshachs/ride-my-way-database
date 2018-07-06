@@ -47,6 +47,7 @@ $ python create_tables.py
 ```
 
 ## Testing
+
 To set up unit testing environment:
 
 ```
@@ -61,7 +62,7 @@ $ nosetests --with-coverage. Also pytest -v
 ```
 
 
-## Start The Server
+##Start The Server
 To start the server run the following command
 ```
 Then run:
@@ -72,8 +73,9 @@ The server will run on port: 5000
 ## Testing API on Postman
 
 
-### API endpoints
 
+
+### API endpoints
 | Endpoint | Method |  Functionality | Authentication |
 | --- | --- | --- | --- |
 | /api/auth/v2/register | POST | Creates a user account | FALSE
@@ -90,3 +92,5 @@ The server will run on port: 5000
 | /api/v2/rides/requests/{request_id} | DELETE | Delete a single request | TRUE
 | /api/v2/rides/requests/accept{request_id} | PUT | Accept a request | TRUE
 | /api/v2/rides/requests/reject{request_id} | PUT | Reject a request | TRUE
+
+## API Documentation
