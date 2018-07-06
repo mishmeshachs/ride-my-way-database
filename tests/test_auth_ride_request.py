@@ -64,7 +64,7 @@ class TestRequests(unittest.TestCase):
         data = json.loads(response.data.decode('UTF-8'))
         self.assertTrue(data[0]['token'])
         self.assertEquals(response.status_code, 201)
-        self.headers = {'token': data[0]['token']}
+        self.headers = {'token': data[0]["token"]}
 
         response = self.client().post('/api/v2/rides/1/requests',
                                       data=json.dumps(self.request),

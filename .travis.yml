@@ -3,8 +3,6 @@ python:
   - 3.6
 install:
   - pip install -r requirements.txt
-env:
-  - HOST=localhost DATABASE=postgres USER=postgres PASSWORD=postgres
 services:
   - postgresql
 before_script:
@@ -13,7 +11,7 @@ before_script:
 # command to run tests
 script:
   - python create_tables.py
-  - pytest --cov-report= --cov=V2/ tests
+  - nosetests --with-coverage
 #run coverage tests
 after_success:
   - coveralls
